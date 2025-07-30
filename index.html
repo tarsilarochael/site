@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="witdh=device-witdh, inicial-scale=1.0">
+    <title>Tarsila Rochael</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /*Estilos gerais*/
+        body {
+            background-color: aliceblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;;
+            font-weight: 700;
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyFrames fadeIn {
+            from { opacity: 0; transform: translateY(-20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        /* Estilo para a imagem de perfil */
+        .profile-pic {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; /* Faz a imagem ficar redonda */
+            object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+            border: 5px solid #6a5acd; /* Borda roxa para a moldura */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Uma sombra suave para destacar */
+            margin-bottom: 30px; /* Espaçamento abaixo da imagem */
+            display: block; /* Para centralizar a imagem */
+            margin-left: auto; /* Centraliza a imagem */
+            margin-right: auto; /* Centraliza a imagem */
+            animation: zoomIn 1s ease-out; /* Animação suave para a imagem */
+        }
+
+        /* Animação para a imagem de perfil */
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .links {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 0;
+            padding: 15px 30px;
+            background-color: #6a5acd;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave para hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            max-width: 300px; 
+            box-sizing: border-box;
+        }
+
+        /*efeito*/
+        .links a:hover {
+            background-color: #483d8b; 
+            transform: translateY(-3px); /* Leve levantamento ao passar o mouse */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra*/
+        }
+
+         /* Estilos responsivos para telas menores */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 36px; /* Reduz o tamanho do título em telas pequenas */
+            }
+            .links a {
+                font-size: 16px; /* Reduz o tamanho da fonte dos botões */
+                padding: 12px 25px; /* Ajusta o padding dos botões */
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/tarsilarochael/site/main/520953027_18520975216046748_581515536841900996_n.jpg" alt="Sua Foto de Perfil" class="profile-pic">
+    <h1>Tarsila Rochael</h1>
+    <div class="links">
+        <a href="https://github.com/tarsilarochael" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/tarsila-rochael-2a40ba23b" target="_blank">LinkedIn</a>
+    </div>
+</body>
+</html>
