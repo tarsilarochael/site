@@ -6,35 +6,37 @@
     <title>Tarsila Rochael</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /*Estilos gerais*/
+        /* Estilos gerais para o corpo da página */
         body {
-            background-color: aliceblue;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
+            background-color: aliceblue; /* Um azul clarinho, bem suave */
+            font-family: 'Arial', sans-serif; /* Fonte padrão para o texto */
+            text-align: center; /* Centraliza todo o conteúdo */
+            margin-top: 50px; /* Espaçamento do topo */
+            color: #333; /* Cor do texto principal */
+            line-height: 1.6; /* Altura da linha para melhor leitura */
+            padding: 20px; /* Espaçamento interno para não grudar nas bordas */
         }
         
+        /* Estilo para o seu nome/título principal */
         h1 {
-            font-family: 'Playfair Display', serif;;
-            font-weight: 700;
-            font-size: 48px;
-            color: #333;
-            margin-bottom: 30px;
-            animation: fadeIn 1.5s ease-out;
+            font-family: 'Playfair Display', serif; /* Usando a fonte que você escolheu */
+            font-weight: 700; /* Negrito */
+            font-size: 48px; /* Tamanho da fonte */
+            color: #333; /* Cor escura para o título */
+            margin-bottom: 15px; /* Reduzido para aproximar da descrição */
+            animation: fadeIn 1.5s ease-out; /* Animação suave de entrada */
         }
 
-        @keyFrames fadeIn {
-            from { opacity: 0; transform: translateY(-20px);}
-            to { opacity: 1; transform: translateY(0);}
+        /* Animação para o título */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Estilo para a imagem de perfil */
         .profile-pic {
-            width: 150px; 
-            height: 150px; 
+            width: 150px; /* Largura da imagem */
+            height: 150px; /* Altura da imagem */
             border-radius: 50%; /* Faz a imagem ficar redonda */
             object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
             border: 5px solid #6a5acd; /* Borda roxa para a moldura */
@@ -52,41 +54,59 @@
             to { opacity: 1; transform: scale(1); }
         }
 
+        /* Estilo para a descrição abaixo do nome */
+        .description {
+            font-size: 1.2em; /* Tamanho da fonte um pouco maior */
+            color: #555; /* Cor mais suave para a descrição */
+            margin-bottom: 40px; /* Espaçamento abaixo da descrição */
+            max-width: 600px; /* Limita a largura para o texto não ficar muito esticado */
+            margin-left: auto; /* Centraliza o bloco de texto */
+            margin-right: auto; /* Centraliza o bloco de texto */
+            padding: 0 20px; /* Um pouco de padding nas laterais para telas pequenas */
+            animation: fadeIn 2s ease-out; /* Animação suave de entrada */
+        }
+
+        /* Estilo para a seção de links */
         .links {
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
+            margin-top: 40px; /* Espaçamento do topo da seção de links */
+            display: flex; /* Ativa o flexbox */
+            flex-direction: column; /* Organiza os itens em coluna (um abaixo do outro) */
+            align-items: center; /* Centraliza os itens horizontalmente na coluna */
+            gap: 20px; /* Espaçamento entre os botões */
         }
 
+        /* Estilo para cada link/botão */
         .links a {
-            display: inline-block;
-            margin: 0;
-            padding: 15px 30px;
-            background-color: #6a5acd;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
+            display: inline-block; /* Para que cada link se comporte como um bloco, permitindo padding e margin */
+            margin: 0; /* Remove a margem padrão, usando 'gap' no container */
+            padding: 15px 30px; /* Espaçamento interno do botão */
+            background-color: #6a5acd; /* Um roxo bonito para os botões */
+            color: white; /* Texto branco */
+            text-decoration: none; /* Remove o sublinhado padrão dos links */
+            border-radius: 10px; /* Cantos bem arredondados */
+            font-size: 18px; /* Tamanho da fonte do botão */
+            font-weight: bold; /* Texto em negrito */
             transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave para hover */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 250px;
-            max-width: 300px; 
-            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+            width: 250px; /* Largura fixa para todos os botões */
+            max-width: 300px; /* Limita a largura máxima para não ficarem muito grandes em telas largas */
+            box-sizing: border-box; /* Garante que o padding não aumente a largura total */
         }
 
-        /*efeito*/
+        /* Efeito ao passar o mouse sobre os botões */
         .links a:hover {
-            background-color: #483d8b; 
+            background-color: #483d8b; /* Roxo mais escuro ao passar o mouse */
             transform: translateY(-3px); /* Leve levantamento ao passar o mouse */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra*/
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
         }
 
+        /* Estilos responsivos para telas menores */
         @media (max-width: 600px) {
             h1 {
                 font-size: 36px; /* Reduz o tamanho do título em telas pequenas */
+            }
+            .description {
+                font-size: 1em; /* Ajusta o tamanho da fonte da descrição */
             }
             .links a {
                 font-size: 16px; /* Reduz o tamanho da fonte dos botões */
@@ -102,8 +122,14 @@
     </style>
 </head>
 <body>
+    <!-- Imagem de perfil -->
     <img src="https://raw.githubusercontent.com/tarsilarochael/site/main/520953027_18520975216046748_581515536841900996_n.jpg" alt="Sua Foto de Perfil" class="profile-pic">
+    
     <h1>Tarsila Rochael</h1>
+    <p class="description">
+        💻📊📱✨
+    </p>
+
     <div class="links">
         <a href="https://github.com/tarsilarochael" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/tarsila-rochael-2a40ba23b" target="_blank">LinkedIn</a>
